@@ -32,26 +32,26 @@ print_menu(jumlah_menu,0,0)
 
 '''Palindrome'''
 
-# def palindcheck(x):
-#     '''Fungsi untuk memeriksa apakah sebuah kata palindrome'''
-#     x = x.lower().replace(" ", "")
-#     # kata yang diinputkan akan dijadikan lowercase dan dihapus spasi
-#     if len(x) <= 1:
-#         return True
-#     # Base Case dari fungsi palindcheck
-#     # jika kata yang diinputkan hanya 1 huruf maka return True, karena tidak ada kata pembanding
-#     elif x[0] != x[-1]:
-#         return False
-#     # Membandingkan kata pertama dan kata terakhir (ujung awal dan akhir)
-#     else :
-#         return palindcheck(x[1:-1])
-#     # Memanggil fungsi palindcheck lagi untuk melakukan recursion dari kata yang belum di cek
+def palindcheck(x):
+    '''Fungsi untuk memeriksa apakah sebuah kata palindrome'''
+    x = x.lower().replace(" ", "")
+    # kata yang diinputkan akan dijadikan lowercase dan dihapus spasi
+    if len(x) <= 1:
+        return True
+    # Base Case dari fungsi palindcheck
+    # jika kata yang diinputkan hanya 1 huruf maka return True, karena tidak ada kata pembanding
+    elif x[0] != x[-1]:
+        return False
+    # Membandingkan kata pertama dan kata terakhir (ujung awal dan akhir)
+    else :
+        return palindcheck(x[1:-1])
+    # Memanggil fungsi palindcheck lagi untuk melakukan recursion dari kata yang belum di cek
     
-# input_kata = input("Masukkan kata: ")
-# # Meminta input kata dari user
-# if palindcheck(input_kata):
-#     print(f"kata {input_kata} adalah Palindrome")
-#     # jika kata yang di input user memenuhi kriteria palindrome, maka termasuk palindrome
-# else:
-#     print(f"kata {input_kata} Bukan palindrome")
-#     # apabila kata yang di input user tidak memenuhi kriteria palindrome, maka Bukan palindrome
+input_kata = input("Masukkan kata: ")
+# Meminta input kata dari user
+if palindcheck(input_kata):
+    print(f"kata {input_kata} adalah Palindrome")
+    # jika kata yang di input user memenuhi kriteria palindrome, maka termasuk palindrome
+else:
+    print(f"kata {input_kata} Bukan palindrome")
+    # apabila kata yang di input user tidak memenuhi kriteria palindrome, maka Bukan palindrome
